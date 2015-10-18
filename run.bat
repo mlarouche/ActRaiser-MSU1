@@ -1,0 +1,1 @@
+C:\Programmation\Traduction\CommonTools\bsnes-plus-073.1b\bsnes.exe actraiser_msu1.sfc
