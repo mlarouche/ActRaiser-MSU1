@@ -1,0 +1,587 @@
+ACTRAISER-USA
+1048576 Bytes (8.0000 Mb)
+HiROM: No
+Internal size: 8 Mb
+Version: 1.0
+Checksum: Ok, 0x83db (calculated) == 0x83db (internal)
+Inverse checksum: Ok, 0x7c24 (calculated) == 0x7c24 (internal)
+Checksum (CRC32): 0xeac3358d
+
+==============
+= Free Space =
+==============
+F8000-FFFFF
+
+============
+= Research =
+============
+; Music Test numbers - 0 index - $a5 - Song Name
+01 = 00 = 7f9418 = Fillmore
+02 = 01 = 88a91c = Sky Palace
+03 = 02 = ccdd18 = Bloodpool ~ Casandora
+04 = 03 = e2e91a = The Beast Appears (Boss Battle 1)
+05 = 04 = fba51c = Round Clear (Victory Jingle)
+06 = 05 = 54851b = Aitos ~ Temple
+07 = 06 = 70941b = Powerful Enemy (Boss Battle 2)
+08 = 07 = b8941a = Opening
+09 = 08 = cca71c = Descent
+10 = 09 = 0ff60e = Piramid ~ Marana
+11 = 10 = edab1b = Birth of the People
+12 = 11 = ebaf1c = Level Up (Jingle)
+13 = 12 = 4bfa19 = North Wall
+14 = 13 = 27c017 = All over the World
+15 = 14 = fad418 = Satan
+16 = 15 = 3d9f1c = Silence (name of the track, not actual silence) (No Loop)
+17 = 16 = 63ef1a = Sacrifices
+18 = 17 = 6bfd1b = Ending (Jingle)
+19 = 18 = f2b31c = Ending (Another Jingle, shorter one)
+20 = 19 = aba21b = Peaceful World
+21 = 20 = 8fab06 = (Actual Silence)
+22 = 21 = 5cb017 = Ending (Long Track)
+
+; JSL to SPC data transfert $029964
+0x248f
+0x118f9
+0x11953
+0x1368D
+0x1e51b
+
+============
+= Routines =
+============
+008024 jsl $02baad   [02baad] A:795f X:0000 Y:0b55 S:01ff D:0000 DB:00 nvMxdIzc V:186 H: 798
+
+0080b4 jsr $8a3c     [008a3c] A:8000 X:0ee0 Y:0000 S:01ff D:0000 DB:00 nvMxdIzc V:  0 H:  80
+
+008325 jsl $02b1f7   [02b1f7] A:0044 X:00d8 Y:0030 S:01fd D:0000 DB:00 nvMxdIZC V:190 H: 178
+008329 ldx #$0000             A:0000 X:1000 Y:0038 S:01fd D:0000 DB:00 nvMxdIZC V: 30 H: 648
+
+008418 php                    A:b97e X:0000 Y:e9e2 S:01f6 D:0000 DB:00 nvMxdIzc V:249 H:1350
+008419 sep #$20               A:b97e X:0000 Y:e9e2 S:01f5 D:0000 DB:00 nvMxdIzc V:250 H:  16
+00841b pha                    A:b97e X:0000 Y:e9e2 S:01f5 D:0000 DB:00 nvMxdIzc V:250 H:  46
+00841c lda $4210     [004210] A:b97e X:0000 Y:e9e2 S:01f4 D:0000 DB:00 nvMxdIzc V:250 H:  76
+00841f lda $4210     [004210] A:b9c2 X:0000 Y:e9e2 S:01f4 D:0000 DB:00 NvMxdIzc V:250 H: 114
+008422 bpl $841f     [00841f] A:b942 X:0000 Y:e9e2 S:01f4 D:0000 DB:00 nvMxdIzc V:250 H: 152
+008424 lda $4210     [004210] A:b9c2 X:0000 Y:e9e2 S:01f4 D:0000 DB:00 NvMxdIzc V:225 H:  32
+008427 pla                    A:b942 X:0000 Y:e9e2 S:01f4 D:0000 DB:00 nvMxdIzc V:225 H:  70
+008428 plp                    A:b97e X:0000 Y:e9e2 S:01f5 D:0000 DB:00 nvMxdIzc V:225 H: 106
+008429 rts                    A:b97e X:0000 Y:e9e2 S:01f6 D:0000 DB:00 nvMxdIzc V:225 H: 142
+
+008623 lda $01,s     [0001f9] A:a4f0 X:08e0 Y:0000 S:01f8 D:0000 DB:00 NvmxdIzc V:250 H: 392
+008625 inc                    A:a43c X:08e0 Y:0000 S:01f8 D:0000 DB:00 NvmxdIzc V:250 H: 438
+008626 sta $0012,x   [0008f2] A:a43d X:08e0 Y:0000 S:01f8 D:0000 DB:00 NvmxdIzc V:250 H: 460
+008629 rts                    A:a43d X:08e0 Y:0000 S:01f8 D:0000 DB:00 NvmxdIzc V:250 H: 514
+
+0086bb lda $0002,x   [0008a2] A:0030 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIZc V:227 H: 104
+0086be clc                    A:0050 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 158
+0086bf adc $0006,x   [0008a6] A:0050 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 180
+0086c2 sta $0002,x   [0008a2] A:0050 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 234
+0086c5 lda $0004,x   [0008a4] A:0050 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 288
+0086c8 clc                    A:0208 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 342
+0086c9 adc $0008,x   [0008a8] A:0208 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 364
+0086cc sta $0004,x   [0008a4] A:0208 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 418
+0086cf rts                    A:0208 X:08a0 Y:0000 S:01f5 D:0000 DB:00 nvmxdIzc V:227 H: 472
+
+00891b lda $0000,x   [000920] A:0920 X:0920 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1082
+00891e bmi $896e     [00896e] A:4000 X:0920 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1136
+008920 bit #$4400             A:4000 X:0920 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1160
+008923 bne $8966     [008966] A:4000 X:0920 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1192
+008925 lda $0030,x   [0008d0] A:0000 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1062
+008928 bit #$0001             A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIzc V:226 H:1116
+00892b bne $895c     [00895c] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1148
+00892d lda $0030,x   [0008d0] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1172
+008930 bit #$0008             A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIzc V:226 H:1226
+008933 beq $8943     [008943] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1258
+008943 ldy $f9       [0000f9] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1288
+008945 beq $894c     [00894c] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1328
+00894c bit #$0002             A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:226 H:1358
+00894f bne $895c     [00895c] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:227 H:  26
+008951 jsr $86bb     [0086bb] A:0030 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:227 H:  50
+008954 dec $0024,x   [0008c4] A:0208 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIzc V:227 H: 522
+008957 bpl $8966     [008966] A:0208 X:08a0 Y:0000 S:01f7 D:0000 DB:00 nvmxdIZc V:227 H: 638
+008959 stz $0024,x   [0011c4] A:0170 X:11a0 Y:0000 S:01f7 D:0000 DB:00 NvmxdIzc V:  0 H: 928
+00895c lda #$8965             A:0170 X:11a0 Y:0000 S:01f7 D:0000 DB:00 NvmxdIzc V:  0 H: 982
+00895f pha                    A:8965 X:11a0 Y:0000 S:01f7 D:0000 DB:00 NvmxdIzc V:  0 H:1014
+008960 lda $0012,x   [0011b2] A:8965 X:11a0 Y:0000 S:01f5 D:0000 DB:00 NvmxdIzc V:  0 H:1052
+008963 dec                    A:a813 X:11a0 Y:0000 S:01f5 D:0000 DB:00 NvmxdIzc V:  0 H:1106
+008964 pha                    A:a812 X:11a0 Y:0000 S:01f5 D:0000 DB:00 NvmxdIzc V:  0 H:1128
+008965 rts                    A:a812 X:11a0 Y:0000 S:01f3 D:0000 DB:00 NvmxdIzc V:  0 H:1166
+008966 txa                    A:a454 X:08e0 Y:0000 S:01fc D:0000 DB:00 NvmxdIzc V:250 H: 954
+008967 clc                    A:08e0 X:08e0 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H: 976
+008968 adc #$0040             A:08e0 X:08e0 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H: 998
+00896b tax                    A:0920 X:08e0 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1030
+00896c bra $891b     [00891b] A:0920 X:0920 Y:0000 S:01fc D:0000 DB:00 nvmxdIzc V:250 H:1052
+00896e plp                    A:8000 X:0ee0 Y:0000 S:01fc D:0000 DB:00 NvmxdIzc V:261 H:1358
+00896f rts                    A:8000 X:0ee0 Y:0000 S:01fd D:0000 DB:00 nvMxdIzc V:  0 H:  30
+
+008a3c php                    A:8000 X:0ee0 Y:0000 S:01fd D:0000 DB:00 nvMxdIzc V:  0 H: 134
+008a3d phb                    A:8000 X:0ee0 Y:0000 S:01fc D:0000 DB:00 nvMxdIzc V:  0 H: 164
+008a3e rep #$20               A:8000 X:0ee0 Y:0000 S:01fb D:0000 DB:00 nvMxdIzc V:  0 H: 194
+008a40 ldy #$06a0             A:8000 X:0ee0 Y:0000 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 224
+008a43 lda $0000,y   [0006a0] A:8000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 256
+008a46 bpl $8a4b     [008a4b] A:4000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 310
+008a4b bit #$6c00             A:4000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 340
+008a4e beq $8a53     [008a53] A:4000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 372
+008a50 brl $8b5b     [008b5b] A:4000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 396
+008b5b tya                    A:4000 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 434
+008b5c clc                    A:06a0 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 456
+008b5d adc #$0040             A:06a0 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 478
+008b60 tay                    A:06e0 X:0ee0 Y:06a0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 510
+008b61 brl $8a43     [008a43] A:06e0 X:0ee0 Y:06e0 S:01fb D:0000 DB:00 nvmxdIzc V:  0 H: 532
+
+00a410 sep #$20               A:a40f X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzc V:257 H: 142
+00a412 lda #$f1               A:a40f X:08e0 Y:0000 S:01fa D:0000 DB:00 NvMxdIzc V:257 H: 172
+00a414 cmp $2140     [002140] A:a4f1 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIzC V:241 H:  88
+00a417 bne $a414     [00a414] A:a4f1 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIzC V:241 H: 126
+; When setting this to zero, no fade occurs
+00a419 lda #$01               A:a4f1 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIZC V: 33 H: 418
+00a41b sta $2140     [002140] A:a401 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIzC V: 33 H: 442
+00a41e rep #$20               A:a401 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIzC V: 33 H: 480
+00a420 lda #$a427             A:a401 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvmxdIzC V: 33 H: 510
+00a423 sta $0012,x   [0008f2] A:a427 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzC V: 33 H: 582
+00a426 rts                    A:a427 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzC V: 33 H: 636
+
+00a435 sta $2140     [002140] A:a4f0 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvMxdIzc V:250 H: 302
+00a438 rep #$20               A:a4f0 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvMxdIzc V:250 H: 308
+00a43a jsr $8623     [008623] A:a4f0 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzc V:250 H: 338
+00a43d sep #$20               A:a43d X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzc V:250 H: 604
+00a43f lda $2140     [002140] A:a43d X:08e0 Y:0000 S:01fa D:0000 DB:00 NvMxdIzc V:250 H: 634
+00a442 rep #$20               A:a400 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIZc V:250 H: 672
+00a444 beq $a447     [00a447] A:a400 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvmxdIZc V:250 H: 702
+00a447 lda #$0001             A:a400 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvmxdIZc V:250 H: 732
+00a44a sta $0024,x   [000904] A:0001 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvmxdIzc V:250 H: 764
+00a44d lda #$a454             A:0001 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvmxdIzc V:250 H: 818
+00a450 sta $0012,x   [0008f2] A:a454 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzc V:250 H: 850
+00a453 rts                    A:a454 X:08e0 Y:0000 S:01fa D:0000 DB:00 NvmxdIzc V:250 H: 904
+
+
+; Play boss Battle
+00a475 ldy #$e9e2             A:a400 X:08e0 Y:0000 S:01fa D:0000 DB:00 nvMxdIZc V:250 H:1238
+00a478 lda #$1a               A:a400 X:08e0 Y:e9e2 S:01fa D:0000 DB:00 NvMxdIzc V:250 H:1270
+; Boss Battle play / Victory Jingle
+00a47a sta $a7       [0000a7] A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvMxdIzc V:261 H: 346
+00a47c sta $ad       [0000ad] A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvMxdIzc V:261 H: 378
+00a47e sty $a5       [0000a5] A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvMxdIzc V:261 H: 410
+00a480 sty $ab       [0000ab] A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvMxdIzc V:255 H: 346
+00a482 rep #$20               A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvMxdIzc V:255 H: 386
+00a484 phx                    A:a41a X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvmxdIzc V:255 H: 416
+00a485 sep #$20               A:a41a X:08e0 Y:e9e2 S:01f8 D:0000 DB:00 nvmxdIzc V:255 H: 454
+00a487 jsr $8418     [008418] A:a41a X:08e0 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:251 H: 766
+00a48a lda #$01               A:a41a X:08e0 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:225 H: 152
+00a48c sta $4200     [004200] A:a401 X:08e0 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:225 H: 176
+00a48f jsl $029964   [029964] A:a401 X:08e0 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:225 H: 212
+00a493 jsr $8418     [008418] A:b97e X:0000 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:227 H:1130
+00a496 lda #$a1               A:b97e X:0000 Y:e9e2 S:01f8 D:0000 DB:00 nvMxdIzc V:225 H: 208
+00a498 sta $4200     [004200] A:b9a1 X:0000 Y:e9e2 S:01f8 D:0000 DB:00 NvMxdIzc V:225 H: 232
+00a49b rep #$20               A:b9a1 X:0000 Y:e9e2 S:01f8 D:0000 DB:00 NvMxdIzc V:225 H: 270
+00a49d plx                    A:b9a1 X:0000 Y:e9e2 S:01f8 D:0000 DB:00 NvmxdIzc V:225 H: 300
+00a49e lda #$0001             A:b9a1 X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvmxdIzc V:225 H: 344
+00a4a1 sta $0024,x   [000904] A:0001 X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvmxdIzc V:225 H: 376
+00a4a4 lda #$a4ab             A:0001 X:08e0 Y:e9e2 S:01fa D:0000 DB:00 nvmxdIzc V:225 H: 430
+00a4a7 sta $0012,x   [0008f2] A:a4ab X:08e0 Y:e9e2 S:01fa D:0000 DB:00 NvmxdIzc V:225 H: 462
+00a4aa rts                    A:a4ab X:08e0 Y:e9e2 S:01fa D:0000 DB:00 NvmxdIzc V:225 H: 516
+
+0297e4 rep #$20               A:a601 X:08a0 Y:9896 S:01ea D:0000 DB:02 nvMxdIzC V:236 H:1094
+0297e6 ldy #$9871             A:a601 X:08a0 Y:9896 S:01ea D:0000 DB:02 nvmxdIzC V:236 H:1124
+0297e9 lda #$080b             A:a601 X:08a0 Y:9871 S:01ea D:0000 DB:02 NvmxdIzC V:236 H:1156
+0297ec jsl $02bf60   [02bf60] A:080b X:08a0 Y:9871 S:01ea D:0000 DB:02 nvmxdIzC V:236 H:1188
+
+02984d jsl $0298b7   [0298b7] A:0302 X:08a0 Y:9896 S:01ea D:0000 DB:02 nvMxdIzC V:235 H: 462
+029851 brl $97e4     [0297e4] A:a601 X:08a0 Y:9896 S:01ea D:0000 DB:02 nvMxdIzC V:236 H:1056
+
+
+0298b7 php                    A:0302 X:08a0 Y:9896 S:01e7 D:0000 DB:02 nvMxdIzC V:235 H: 532
+0298b8 phx                    A:0302 X:08a0 Y:9896 S:01e6 D:0000 DB:02 nvMxdIzC V:235 H: 602
+0298b9 phy                    A:0302 X:08a0 Y:9896 S:01e4 D:0000 DB:02 nvMxdIzC V:235 H: 640
+0298ba rep #$20               A:0302 X:08a0 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzC V:235 H: 678
+0298bc and #$00ff             A:0302 X:08a0 Y:9896 S:01e2 D:0000 DB:02 nvmxdIzC V:235 H: 708
+0298bf dec                    A:0002 X:08a0 Y:9896 S:01e2 D:0000 DB:02 nvmxdIzC V:235 H: 740
+0298c0 pha                    A:0001 X:08a0 Y:9896 S:01e2 D:0000 DB:02 nvmxdIzC V:235 H: 762
+0298c1 asl a                  A:0001 X:08a0 Y:9896 S:01e0 D:0000 DB:02 nvmxdIzC V:235 H: 800
+0298c2 clc                    A:0002 X:08a0 Y:9896 S:01e0 D:0000 DB:02 nvmxdIzc V:235 H: 822
+0298c3 adc $01,s     [0001e1] A:0002 X:08a0 Y:9896 S:01e0 D:0000 DB:02 nvmxdIzc V:235 H: 844
+0298c5 plx                    A:0003 X:08a0 Y:9896 S:01e0 D:0000 DB:02 nvmxdIzc V:235 H: 890
+0298c6 tax                    A:0003 X:0001 Y:9896 S:01e2 D:0000 DB:02 nvmxdIzc V:235 H: 934
+0298c7 lda $02c7e5,x [02c7e8] A:0003 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvmxdIzc V:235 H: 956
+0298cb sta $a5       [0000a5] A:a988 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvmxdIzc V:235 H:1012
+0298cd sta $ab       [0000ab] A:a988 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvmxdIzc V:235 H:1052
+0298cf sep #$20               A:a988 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvmxdIzc V:235 H:1092
+0298d1 lda $02c7e7,x [02c7ea] A:a988 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:235 H:1122
+0298d5 sta $a7       [0000a7] A:a91c X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:235 H:1170
+0298d7 sta $ad       [0000ad] A:a91c X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:235 H:1202
+0298d9 lda #$f0               A:a91c X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:235 H:1234
+0298db sta $2140     [022140] A:a9f0 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:235 H:1258
+0298de lda $2140     [022140] A:a9f0 X:0003 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:235 H:1296
+0298e1 bne $98de     [0298de] A:a901 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:235 H:1334
+0298e3 jsr $9ac1     [029ac1] A:a900 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIZc V: 48 H: 452
+0298e6 jsr $9ac1     [029ac1] A:a942 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 892
+0298e9 lda #$ff               A:a942 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 794
+0298eb sta $2140     [022140] A:a9ff X:0003 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:236 H: 818
+0298ee jsr $9ac1     [029ac1] A:a9ff X:0003 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:236 H: 856
+0298f1 jsr $9ac1     [029ac1] A:a942 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 920
+0298f4 lda #$01               A:a942 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 822
+0298f6 sta $4200     [024200] A:a901 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 846
+0298f9 jsl $029964   [029964] A:a901 X:0003 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 884
+0298fd jsr $9ac1     [029ac1] A:a67e X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:232 H: 508
+029900 lda #$a1               A:a642 X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:225 H: 142
+029902 sta $4200     [024200] A:a6a1 X:0000 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:225 H: 166
+029905 jsr $9ac1     [029ac1] A:a6a1 X:0000 Y:9896 S:01e2 D:0000 DB:02 NvMxdIzc V:225 H: 204
+029908 jsr $9ac1     [029ac1] A:a642 X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 900
+02990b lda #$01               A:a642 X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 818
+02990d sta $2140     [022140] A:a601 X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 842
+029910 ply                    A:a601 X:0000 Y:9896 S:01e2 D:0000 DB:02 nvMxdIzc V:236 H: 880
+029911 plx                    A:a601 X:0000 Y:9896 S:01e4 D:0000 DB:02 NvMxdIzc V:236 H: 924
+029912 plp                    A:a601 X:08a0 Y:9896 S:01e6 D:0000 DB:02 nvMxdIzc V:236 H: 968
+029913 rtl                    A:a601 X:08a0 Y:9896 S:01e7 D:0000 DB:02 nvMxdIzC V:236 H:1004
+
+029930 stx $a5       [0000a5] A:0107 X:9acd Y:0000 S:01fc D:0000 DB:00 NvMxdIzC V: 36 H: 932
+029932 lda #$02               A:0107 X:9acd Y:0000 S:01fc D:0000 DB:00 NvMxdIzC V: 36 H: 948
+029934 sta $a7       [0000a7] A:0102 X:9acd Y:0000 S:01fc D:0000 DB:00 nvMxdIzC V: 36 H: 972
+029936 jsr $9a56     [029a56] A:0102 X:9acd Y:0000 S:01fc D:0000 DB:00 nvMxdIzC V: 36 H:1004
+029939 jsr $9ac1     [029ac1] A:0450 X:9acd Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:102 H:1132
+02993c jsr $9ac1     [029ac1] A:04c2 X:9acd Y:0b55 S:01fc D:0000 DB:00 NvMxdIzC V:225 H: 118
+02993f lda #$ff               A:0442 X:9acd Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:225 H: 136
+029941 sta $2140     [002140] A:04ff X:9acd Y:0b55 S:01fc D:0000 DB:00 NvMxdIzC V:225 H: 160
+029944 ldx #$ac00             A:04ff X:9acd Y:0b55 S:01fc D:0000 DB:00 NvMxdIzC V:225 H: 198
+029947 stx $a5       [0000a5] A:04ff X:ac00 Y:0b55 S:01fc D:0000 DB:00 NvMxdIzC V:225 H: 230
+029949 lda #$06               A:04ff X:ac00 Y:0b55 S:01fc D:0000 DB:00 NvMxdIzC V:225 H: 270
+02994b sta $a7       [0000a7] A:0406 X:ac00 Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:225 H: 294
+02994d ldx #$3000             A:0406 X:ac00 Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:225 H: 326
+029950 stx $0358     [000358] A:0406 X:3000 Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:225 H: 358
+029953 jsl $029964   [029964] A:0406 X:3000 Y:0b55 S:01fc D:0000 DB:00 nvMxdIzC V:225 H: 406
+02995b clc                    A:6e4c X:0000 Y:0b55 S:01fc D:0000 DB:00 nvmxdIzC V:186 H: 606
+02995c adc $08       [000008] A:6e4c X:0000 Y:0b55 S:01fc D:0000 DB:00 nvmxdIzc V:186 H: 628
+02995e sta $0358     [000358] A:795f X:0000 Y:0b55 S:01fc D:0000 DB:00 nvmxdIzc V:186 H: 668
+029961 sep #$20               A:795f X:0000 Y:0b55 S:01fc D:0000 DB:00 nvmxdIzc V:186 H: 716
+029963 rtl                    A:795f X:0000 Y:0b55 S:01fc D:0000 DB:00 nvMxdIzc V:186 H: 746
+
+029964 php                    A:0000 X:a988 Y:029e S:01f0 D:0000 DB:00 nvMxdIZC V:225 H: 422
+029965 phy                    A:0000 X:a988 Y:029e S:01ef D:0000 DB:00 nvMxdIZC V:225 H: 452
+029966 jsr $9a56     [029a56] A:0000 X:a988 Y:029e S:01ed D:0000 DB:00 nvMxdIZC V:225 H: 490
+029969 dey                    A:0004 X:3000 Y:0734 S:01f6 D:0000 DB:00 nvMxdIzC V:260 H: 522
+02996a dey                    A:0004 X:3000 Y:0733 S:01f6 D:0000 DB:00 nvMxdIzC V:260 H: 584
+02996b sep #$20               A:0004 X:3000 Y:0732 S:01f6 D:0000 DB:00 nvMxdIzC V:260 H: 606
+02996d jsr $9ac1     [029ac1] A:0004 X:3000 Y:0732 S:01f6 D:0000 DB:00 nvMxdIzC V:260 H: 636
+029970 jsr $9ac1     [029ac1] A:0042 X:3000 Y:0732 S:01f6 D:0000 DB:00 nvMxdIzC V:225 H: 170
+029973 lda #$ff               A:0042 X:3000 Y:0732 S:01f6 D:0000 DB:00 nvMxdIzC V:225 H: 124
+029975 sta $2140     [002140] A:00ff X:3000 Y:0732 S:01f6 D:0000 DB:00 NvMxdIzC V:225 H: 148
+029978 lda #$cc               A:00ff X:3000 Y:0732 S:01f6 D:0000 DB:00 NvMxdIzC V:225 H: 186
+02997a sta $04       [000004] A:00cc X:3000 Y:0732 S:01f6 D:0000 DB:00 NvMxdIzC V:225 H: 210
+02997c rep #$20               A:00cc X:3000 Y:0732 S:01f6 D:0000 DB:00 NvMxdIzC V:225 H: 242
+02997e lda #$bbaa             A:00cc X:3000 Y:0732 S:01f6 D:0000 DB:00 NvmxdIzC V:225 H: 272
+029981 cmp $2140     [002140] A:bbaa X:3000 Y:0732 S:01f6 D:0000 DB:00 NvmxdIzC V:225 H: 304
+029984 bne $9981     [029981] A:bbaa X:3000 Y:0732 S:01f6 D:0000 DB:00 nvmxdIzC V:225 H: 348
+029986 lda [$a5],y   [06b332] A:bbaa X:3000 Y:0732 S:01f6 D:0000 DB:00 nvmxdIZC V: 22 H: 168
+029988 iny                    A:000c X:3000 Y:0732 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 232
+029989 sty $06       [000006] A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 254
+02998b and #$00ff             A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 294
+02998e sta $0c       [00000c] A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 326
+029990 ldx $0358     [000358] A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 366
+029993 stx $02       [000002] A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 414
+029995 stz $00       [000000] A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 454
+029997 rep #$20               A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 494
+029999 ldx #$8000             A:000c X:3000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 524
+02999c stx $a8       [0000a8] A:000c X:8000 Y:0733 S:01f6 D:0000 DB:00 NvmxdIzC V: 22 H: 596
+02999e sep #$20               A:000c X:8000 Y:0733 S:01f6 D:0000 DB:00 NvmxdIzC V: 22 H: 636
+0299a0 lda #$08               A:000c X:8000 Y:0733 S:01f6 D:0000 DB:00 NvMxdIzC V: 22 H: 666
+0299a2 sta $aa       [0000aa] A:0008 X:8000 Y:0733 S:01f6 D:0000 DB:00 nvMxdIzC V: 22 H: 690
+0299a4 rep #$20               A:0008 X:8000 Y:0733 S:01f6 D:0000 DB:00 nvMxdIzC V: 22 H: 722
+0299a6 ldy $06       [000006] A:0008 X:8000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 752
+0299a8 lda [$a5],y   [06b333] A:0008 X:8000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 792
+0299aa iny                    A:0100 X:8000 Y:0733 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 856
+0299ab sty $06       [000006] A:0100 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 878
+0299ad and #$00ff             A:0100 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H: 918
+0299b0 sta $0e       [00000e] A:0000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIZC V: 22 H: 950
+0299b2 lda $02       [000002] A:0000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIZC V: 22 H: 990
+0299b4 clc                    A:3000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzC V: 22 H:1030
+0299b5 adc $00       [000000] A:3000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1052
+0299b7 sta $02       [000002] A:3000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1092
+0299b9 lda [$a8]     [088000] A:3000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1132
+0299bb sta $00       [000000] A:0b01 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1196
+0299bd sta $08       [000008] A:0b01 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1236
+0299bf inc $a8       [0000a8] A:0b01 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIzc V: 22 H:1276
+0299c1 inc $a8       [0000a8] A:0b01 X:8000 Y:0734 S:01f6 D:0000 DB:00 NvmxdIzc V: 22 H:1338
+0299c3 lda $0e       [00000e] A:0b01 X:8000 Y:0734 S:01f6 D:0000 DB:00 NvmxdIzc V: 23 H:  36
+0299c5 beq $99db     [0299db] A:0000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIZc V: 23 H:  76
+
+0299db ldy $a8       [0000a8] A:0000 X:8000 Y:0734 S:01f6 D:0000 DB:00 nvmxdIZc V: 23 H: 106
+0299dd stz $a8       [0000a8] A:0000 X:8000 Y:8002 S:01f6 D:0000 DB:00 NvmxdIzc V: 23 H: 146
+0299df sep #$20               A:0000 X:8000 Y:8002 S:01f6 D:0000 DB:00 NvmxdIzc V: 23 H: 186
+0299e1 lda $04       [000004] A:0000 X:8000 Y:8002 S:01f6 D:0000 DB:00 NvMxdIzc V: 23 H: 216
+0299e3 bra $9a26     [029a26] A:00cc X:8000 Y:8002 S:01f6 D:0000 DB:00 NvMxdIzc V: 23 H: 248
+0299e7 iny                    A:3000 X:0b01 Y:8002 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 368
+0299e8 bne $99ef     [0299ef] A:3000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 NVMxdIzC V: 24 H: 390
+0299ef xba                    A:3000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 NVMxdIzC V: 24 H: 420
+0299f2 bra $9a06     [029a06] A:0000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 472
+0299f4 xba                    A:0000 X:0b00 Y:8003 S:01f6 D:0000 DB:00 nVMxdIzC V: 24 H: 698
+0299f5 lda [$a8],y   [088003] A:0000 X:0b00 Y:8003 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 726
+0299f7 iny                    A:0000 X:0b00 Y:8003 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 782
+0299f8 bne $99ff     [0299ff] A:0000 X:0b00 Y:8004 S:01f6 D:0000 DB:00 NVMxdIzC V: 24 H: 804
+0299ff xba                    A:0000 X:0b00 Y:8004 S:01f6 D:0000 DB:00 NVMxdIzC V: 24 H: 834
+029a00 cmp $2140     [002140] A:0000 X:0b00 Y:8004 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 862
+029a03 bne $9a00     [029a00] A:0000 X:0b00 Y:8004 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 900
+029a05 inc                    A:0000 X:0b00 Y:8004 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 924
+029a06 rep #$20               A:0000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 502
+029a08 sta $2140     [002140] A:0000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 nVmxdIZC V: 24 H: 532
+029a0b sep #$20               A:0000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 nVmxdIZC V: 24 H: 616
+029a0d dex                    A:0000 X:0b01 Y:8003 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 646
+029a0e bne $99f4     [0299f4] A:0000 X:0b00 Y:8003 S:01f6 D:0000 DB:00 nVMxdIzC V: 24 H: 668
+029a10 cmp $2140     [002140] A:0000 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nVMxdIZC V: 15 H: 340
+029a13 bne $9a10     [029a10] A:0000 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nVMxdIzc V: 15 H: 378
+029a15 adc #$03               A:0000 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nVMxdIZC V: 15 H: 850
+029a17 beq $9a15     [029a15] A:0004 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nvMxdIzc V: 15 H: 874
+029a19 sta $04       [000004] A:0004 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nvMxdIzc V: 15 H: 898
+029a1b dec $0c       [00000c] A:0004 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nvMxdIzc V: 15 H: 930
+029a1d beq $9a22     [029a22] A:0004 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nvMxdIzc V: 15 H: 976
+029a1f brl $9997     [029997] A:0004 X:0000 Y:8b03 S:01f6 D:0000 DB:00 nvMxdIzc V: 15 H:1000
+029a22 stz $00       [000000] A:1216 X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIZc V:185 H:  72
+029a24 stz $01       [000001] A:1216 X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIZc V:185 H: 104
+029a26 pha                    A:00cc X:8000 Y:8002 S:01f6 D:0000 DB:00 NvMxdIzc V: 23 H: 278
+029a27 rep #$20               A:00cc X:8000 Y:8002 S:01f5 D:0000 DB:00 NvMxdIzc V: 23 H: 308
+029a29 lda $00       [000000] A:00cc X:8000 Y:8002 S:01f5 D:0000 DB:00 NvmxdIzc V: 23 H: 338
+029a2b tax                    A:0b01 X:8000 Y:8002 S:01f5 D:0000 DB:00 nvmxdIzc V: 23 H: 378
+029a2c lda $02       [000002] A:0b01 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvmxdIzc V: 23 H: 400
+029a2e sta $2142     [002142] A:3000 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvmxdIzc V: 23 H: 440
+029a31 sep #$20               A:3000 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvmxdIzc V: 23 H: 484
+029a33 cpx #$0001             A:3000 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvMxdIzc V: 23 H: 514
+029a36 lda #$00               A:3000 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvMxdIzC V: 23 H: 586
+029a38 rol a                  A:3000 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvMxdIZC V: 23 H: 610
+029a39 sta $2141     [002141] A:3001 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvMxdIzc V: 23 H: 632
+029a3c adc #$7f               A:3001 X:0b01 Y:8002 S:01f5 D:0000 DB:00 nvMxdIzc V: 23 H: 670
+029a3e pla                    A:3080 X:0b01 Y:8002 S:01f5 D:0000 DB:00 NVMxdIzc V: 23 H: 694
+029a3f sta $2140     [002140] A:30cc X:0b01 Y:8002 S:01f6 D:0000 DB:00 NVMxdIzc V: 23 H: 730
+029a42 cmp $2140     [002140] A:30cc X:0b01 Y:8002 S:01f6 D:0000 DB:00 NVMxdIzc V: 23 H: 768
+029a45 bne $9a42     [029a42] A:30cc X:0b01 Y:8002 S:01f6 D:0000 DB:00 nVMxdIzC V: 23 H: 806
+029a47 bvs $99e5     [0299e5] A:30cc X:0b01 Y:8002 S:01f6 D:0000 DB:00 nVMxdIZC V: 24 H: 282
+029a49 lda #$7e               A:6e16 X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIZC V:186 H: 232
+029a4b sta $aa       [0000aa] A:6e7e X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIzC V:186 H: 256
+029a4d stz $2142     [002142] A:6e7e X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIzC V:186 H: 288
+029a50 stz $2143     [002143] A:6e7e X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIzC V:186 H: 326
+029a53 ply                    A:6e7e X:0000 Y:c924 S:01f6 D:0000 DB:00 nvMxdIzC V:186 H: 364
+029a54 plp                    A:6e7e X:0000 Y:0b55 S:01f8 D:0000 DB:00 nvMxdIzC V:186 H: 408
+029a55 rtl                    A:6e7e X:0000 Y:0b55 S:01f9 D:0000 DB:00 nvMxdIzC V:186 H: 444
+
+029a56 php                    A:0102 X:9acd Y:0034 S:01fa D:0000 DB:00 nvMxdIzC V: 36 H:1034
+029a57 phx                    A:0102 X:9acd Y:0034 S:01f9 D:0000 DB:00 nvMxdIzC V: 36 H:1064
+029a58 rep #$30               A:0102 X:9acd Y:0034 S:01f7 D:0000 DB:00 nvMxdIzC V: 36 H:1102
+029a5a ldy #$0000             A:0102 X:9acd Y:0034 S:01f7 D:0000 DB:00 nvmxdIzC V: 36 H:1132
+029a5d lda #$bbaa             A:0102 X:9acd Y:0000 S:01f7 D:0000 DB:00 nvmxdIZC V: 36 H:1164
+029a60 cmp $2140     [002140] A:bbaa X:9acd Y:0000 S:01f7 D:0000 DB:00 NvmxdIzC V: 36 H:1196
+029a63 bne $9a60     [029a60] A:bbaa X:9acd Y:0000 S:01f7 D:0000 DB:00 nvmxdIZC V: 36 H:1240
+029a65 sep #$20               A:bbaa X:9acd Y:0000 S:01f7 D:0000 DB:00 nvmxdIZC V: 36 H:1264
+029a67 lda #$cc               A:bbaa X:9acd Y:0000 S:01f7 D:0000 DB:00 nvMxdIZC V: 36 H:1294
+029a69 bra $9a91     [029a91] A:bbcc X:9acd Y:0000 S:01f7 D:0000 DB:00 NvMxdIzC V: 36 H:1318
+
+
+029a6b lda [$a5],y   [029ad1] A:04cc X:0b4d Y:0004 S:01f7 D:0000 DB:00 nVMxdIZC V: 37 H:1090
+029a6d iny                    A:0420 X:0b4d Y:0004 S:01f7 D:0000 DB:00 nVMxdIzC V: 37 H:1146
+029a6e xba                    A:0420 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVMxdIzC V: 37 H:1168
+029a6f lda #$00               A:2004 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVMxdIzC V: 37 H:1196
+029a71 bra $9a7e     [029a7e] A:2000 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVMxdIZC V: 37 H:1220
+029a73 xba                    A:2000 X:0b4c Y:0005 S:01f7 D:0000 DB:00 nVMxdIzC V: 38 H:  42
+029a74 lda [$a5],y   [029ad2] A:0020 X:0b4c Y:0005 S:01f7 D:0000 DB:00 nVMxdIzC V: 38 H:  70
+029a76 iny                    A:00cd X:0b4c Y:0005 S:01f7 D:0000 DB:00 NVMxdIzC V: 38 H: 126
+029a77 xba                    A:00cd X:0b4c Y:0006 S:01f7 D:0000 DB:00 nVMxdIzC V: 38 H: 148
+029a78 cmp $2140     [002140] A:cd00 X:0b4c Y:0006 S:01f7 D:0000 DB:00 nVMxdIZC V: 38 H: 176
+029a7b bne $9a78     [029a78] A:cd00 X:0b4c Y:0006 S:01f7 D:0000 DB:00 nVMxdIzc V: 38 H: 214
+029a7d inc                    A:cd00 X:0b4c Y:0006 S:01f7 D:0000 DB:00 nVMxdIZC V: 38 H: 374
+029a7e rep #$20               A:2000 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVMxdIZC V: 37 H:1250
+029a80 sta $2140     [002140] A:2000 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVmxdIZC V: 37 H:1280
+029a83 sep #$20               A:2000 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVmxdIZC V: 37 H:1324
+029a85 dex                    A:2000 X:0b4d Y:0005 S:01f7 D:0000 DB:00 nVMxdIZC V: 37 H:1354
+029a86 bne $9a73     [029a73] A:2000 X:0b4c Y:0005 S:01f7 D:0000 DB:00 nVMxdIzC V: 38 H:  12
+029a88 cmp $2140     [002140] A:6f4c X:0000 Y:0b51 S:01f7 D:0000 DB:00 nVMxdIZC V:101 H: 476
+029a8b bne $9a88     [029a88] A:6f4c X:0000 Y:0b51 S:01f7 D:0000 DB:00 nVMxdIzC V:101 H: 514
+029a8d adc #$03               A:6f4c X:0000 Y:0b51 S:01f7 D:0000 DB:00 nVMxdIZC V:101 H: 850
+029a8f beq $9a8d     [029a8d] A:6f50 X:0000 Y:0b51 S:01f7 D:0000 DB:00 nvMxdIzc V:101 H: 874
+029a91 pha                    A:6f50 X:0000 Y:0b51 S:01f7 D:0000 DB:00 nvMxdIzc V:101 H: 898
+029a92 rep #$20               A:6f50 X:0000 Y:0b51 S:01f6 D:0000 DB:00 nvMxdIzc V:101 H: 928
+029a94 lda [$a5],y   [02a61e] A:6f50 X:0000 Y:0b51 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H: 958
+029a96 iny                    A:0000 X:0000 Y:0b51 S:01f6 D:0000 DB:00 nvmxdIZc V:101 H:1022
+029a97 iny                    A:0000 X:0000 Y:0b52 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1044
+029a98 tax                    A:0000 X:0000 Y:0b53 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1066
+029a99 lda [$a5],y   [02a620] A:0000 X:0000 Y:0b53 S:01f6 D:0000 DB:00 nvmxdIZc V:101 H:1088
+029a9b iny                    A:0400 X:0000 Y:0b53 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1152
+029a9c iny                    A:0400 X:0000 Y:0b54 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1174
+029a9d sta $2142     [002142] A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1196
+029aa0 sep #$20               A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvmxdIzc V:101 H:1240
+029aa2 cpx #$0001             A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvMxdIzc V:101 H:1270
+029aa5 lda #$00               A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 NvMxdIzc V:101 H:1302
+029aa7 rol a                  A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvMxdIZc V:101 H:1326
+029aa8 sta $2141     [002141] A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvMxdIZc V:101 H:1348
+029aab adc #$7f               A:0400 X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvMxdIZc V:102 H:  22
+029aad pla                    A:047f X:0000 Y:0b55 S:01f6 D:0000 DB:00 nvMxdIzc V:102 H:  46
+029aae sta $2140     [002140] A:04cc X:0b4d Y:0004 S:01f7 D:0000 DB:00 NVMxdIzc V: 37 H: 340
+029ab1 cmp $2140     [002140] A:04cc X:0b4d Y:0004 S:01f7 D:0000 DB:00 NVMxdIzc V: 37 H: 346
+029ab4 bne $9ab1     [029ab1] A:04cc X:0b4d Y:0004 S:01f7 D:0000 DB:00 nVMxdIzC V: 37 H: 384
+029ab6 bvs $9a6b     [029a6b] A:04cc X:0b4d Y:0004 S:01f7 D:0000 DB:00 nVMxdIZC V: 37 H:1060
+029ab8 stz $2142     [002142] A:0450 X:0000 Y:0b55 S:01f7 D:0000 DB:00 nvMxdIZC V:102 H: 926
+029abb stz $2143     [002143] A:0450 X:0000 Y:0b55 S:01f7 D:0000 DB:00 nvMxdIZC V:102 H: 964
+029abe plx                    A:0450 X:0000 Y:0b55 S:01f7 D:0000 DB:00 nvMxdIZC V:102 H:1002
+029abf plp                    A:0450 X:9acd Y:0b55 S:01f9 D:0000 DB:00 NvMxdIzC V:102 H:1046
+029ac0 rts                    A:0450 X:9acd Y:0b55 S:01fa D:0000 DB:00 nvMxdIzC V:102 H:1082
+
+029ac1 lda $4210     [004210] A:0004 X:3000 Y:0732 S:01f4 D:0000 DB:00 nvMxdIzC V:258 H:1096
+029ac4 lda $4210     [004210] A:00c2 X:3000 Y:0732 S:01f4 D:0000 DB:00 NvMxdIzC V:258 H:1134
+029ac7 bpl $9ac4     [029ac4] A:0042 X:3000 Y:0732 S:01f4 D:0000 DB:00 nvMxdIzC V:258 H:1172
+029ac9 lda $4210     [004210] A:00c2 X:3000 Y:0732 S:01f4 D:0000 DB:00 NvMxdIzC V:225 H:  28
+029acc rts                    A:0042 X:3000 Y:0732 S:01f4 D:0000 DB:00 nvMxdIzC V:225 H:  66
+
+02abf0 php                    A:03c2 X:08a0 Y:9896 S:01e1 D:0000 DB:02 NvMxdIzc V:225 H: 162
+02abf1 phb                    A:03c2 X:08a0 Y:9896 S:01e0 D:0000 DB:02 NvMxdIzc V:225 H: 192
+02abf2 rep #$30               A:03c2 X:08a0 Y:9896 S:01df D:0000 DB:02 NvMxdIzc V:225 H: 222
+02abf4 pha                    A:03c2 X:08a0 Y:9896 S:01df D:0000 DB:02 NvmxdIzc V:225 H: 252
+02abf5 phx                    A:03c2 X:08a0 Y:9896 S:01dd D:0000 DB:02 NvmxdIzc V:225 H: 290
+02abf6 phy                    A:03c2 X:08a0 Y:9896 S:01db D:0000 DB:02 NvmxdIzc V:225 H: 328
+02abf7 sep #$20               A:03c2 X:08a0 Y:9896 S:01d9 D:0000 DB:02 NvmxdIzc V:225 H: 366
+02abf9 rep #$10               A:03c2 X:08a0 Y:9896 S:01d9 D:0000 DB:02 NvMxdIzc V:225 H: 396
+02abfb cld                    A:03c2 X:08a0 Y:9896 S:01d9 D:0000 DB:02 NvMxdIzc V:225 H: 426
+02abfc lda #$00               A:03c2 X:08a0 Y:9896 S:01d9 D:0000 DB:02 NvMxdIzc V:225 H: 448
+02abfe pha                    A:0300 X:08a0 Y:9896 S:01d9 D:0000 DB:02 nvMxdIZc V:225 H: 472
+02abff plb                    A:0300 X:08a0 Y:9896 S:01d8 D:0000 DB:02 nvMxdIZc V:225 H: 502
+02ac00 stz $420c     [00420c] A:0300 X:08a0 Y:9896 S:01d9 D:0000 DB:00 nvMxdIZc V:225 H: 578
+02ac03 jsr $aca3     [02aca3] A:0300 X:08a0 Y:9896 S:01d9 D:0000 DB:00 nvMxdIZc V:225 H: 616
+02ac06 jsl $02adc3   [02adc3] A:0301 X:0220 Y:9896 S:01d9 D:0000 DB:00 nvMxdIzc V:229 H: 212
+02ac0a lda $18       [000018] A:0303 X:000c Y:0006 S:01d9 D:0000 DB:00 nvMxdIzc V:230 H:1186
+02ac0c beq $ac5e     [02ac5e] A:0301 X:000c Y:0006 S:01d9 D:0000 DB:00 nvMxdIzc V:230 H:1218
+02ac0e jsr $acc8     [02acc8] A:0301 X:000c Y:0006 S:01d9 D:0000 DB:00 nvMxdIzc V:230 H:1242
+02ac11 jsr $ade2     [02ade2] A:0000 X:0080 Y:0006 S:01d9 D:0000 DB:00 nvMxdIzc V:232 H:  66
+02ac14 jsr $aeae     [02aeae] A:0000 X:0080 Y:0006 S:01d9 D:0000 DB:00 nvMxdIZc V:232 H: 262
+02ac17 jsr $adff     [02adff] A:0000 X:0080 Y:0006 S:01d9 D:0000 DB:00 nvMxdIZc V:232 H: 428
+02ac1a jsr $ae75     [02ae75] A:0020 X:0001 Y:0006 S:01d9 D:0000 DB:00 nvMxdIZc V:233 H: 258
+02ac1d jsr $aeeb     [02aeeb] A:0000 X:0001 Y:0006 S:01d9 D:0000 DB:00 nvMxdIZc V:233 H: 418
+02ac20 jsr $af30     [02af30] A:0000 X:0100 Y:0006 S:01d9 D:0000 DB:00 nvMxdIZc V:235 H: 478
+02ac23 lda $4212     [004212] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZc V:235 H:1034
+02ac26 ror a                  A:0082 X:0007 Y:0000 S:01d9 D:0000 DB:00 NvMxdIzc V:235 H:1072
+02ac27 bcs $ac23     [02ac23] A:0041 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIzc V:235 H:1094
+02ac29 rep #$20               A:0041 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIzc V:235 H:1118
+02ac2b lda $88       [000088] A:0041 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIzc V:235 H:1148
+02ac2d lsr a                  A:c9d7 X:0007 Y:0000 S:01d9 D:0000 DB:00 NvmxdIzc V:235 H:1188
+02ac2e lda #$0000             A:64eb X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIzC V:235 H:1210
+02ac31 bcs $ac39     [02ac39] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZC V:235 H:1242
+02ac33 lda $035a     [00035a] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZc V:234 H: 876
+02ac36 stz $035a     [00035a] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZc V:234 H: 924
+02ac39 sta $2142     [002142] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZC V:234 H: 902
+02ac3c sep #$20               A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZC V:234 H: 914
+02ac3e lda $eb       [0000eb] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZC V:234 H: 944
+02ac40 beq $ac48     [02ac48] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZC V:234 H: 976
+02ac48 lda $92       [000092] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZC V:234 H:1006
+02ac4a sta $420c     [00420c] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZC V:234 H:1038
+02ac4d rep #$30               A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvMxdIZC V:234 H:1076
+02ac4f inc $88       [000088] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZC V:234 H:1106
+02ac51 lda $4218     [004218] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 NvmxdIzC V:234 H:1168
+02ac54 and $f4       [0000f4] A:0000 X:0007 Y:0000 S:01d9 D:0000 DB:00 nvmxdIZC V:234 H:1212
+
+02b1f7 php                    A:0044 X:00d8 Y:0030 S:01fa D:0000 DB:00 nvMxdIZC V:190 H: 248
+02b1f8 sep #$20               A:0044 X:00d8 Y:0030 S:01f9 D:0000 DB:00 nvMxdIZC V:190 H: 278
+02b1fa rep #$10               A:0044 X:00d8 Y:0030 S:01f9 D:0000 DB:00 nvMxdIZC V:190 H: 308
+02b1fc jsr $b250     [02b250] A:0044 X:00d8 Y:0030 S:01f9 D:0000 DB:00 nvMxdIZC V:190 H: 338
+02b1ff jsr $b6c8     [02b6c8] A:b800 X:0000 Y:001d S:01f9 D:0000 DB:00 nvMxdIZC V:225 H: 386
+02b202 cmp #$00               A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIZC V:225 H: 744
+02b204 beq $b24e     [02b24e] A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIzC V:225 H: 768
+02b206 bit #$80               A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIzC V:225 H: 792
+02b208 beq $b20f     [02b20f] A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIZC V:225 H: 816
+02b20f bit #$40               A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIZC V:225 H: 846
+02b211 beq $b218     [02b218] A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIzC V:225 H: 870
+02b213 jsr $b330     [02b330] A:0040 X:0000 Y:001e S:01f9 D:0000 DB:00 nvMxdIzC V:225 H: 894
+02b216 bra $b1ff     [02b1ff] A:0029 X:00a5 Y:0024 S:01f9 D:0000 DB:00 nvMxdIzC V:256 H: 898
+02b218 bit #$20               A:0010 X:0000 Y:002c S:01f9 D:0000 DB:00 nvMxdIZC V:104 H: 156
+02b21a beq $b221     [02b221] A:0010 X:0000 Y:002c S:01f9 D:0000 DB:00 nvMxdIZC V:104 H: 180
+02b221 bit #$10               A:0010 X:0000 Y:002c S:01f9 D:0000 DB:00 nvMxdIZC V:104 H: 210
+02b223 beq $b22a     [02b22a] A:0010 X:0000 Y:002c S:01f9 D:0000 DB:00 nvMxdIzC V:104 H: 234
+02b225 jsr $b3eb     [02b3eb] A:0010 X:0000 Y:002c S:01f9 D:0000 DB:00 nvMxdIzC V:104 H: 258
+02b228 bra $b1ff     [02b1ff] A:0080 X:4000 Y:0030 S:01f9 D:0000 DB:00 nvMxdIzC V:252 H: 918
+
+02b240 jsr $b63b     [02b63b] A:0002 X:0800 Y:0018 S:01f9 D:0000 DB:00 nvMxdIzC V: 65 H:  50
+
+02b243 bra $b1ff     [02b1ff] A:b800 X:0000 Y:001d S:01f9 D:0000 DB:00 nvMxdIZC V:225 H: 404
+
+02b24e plp                    A:0000 X:1000 Y:0038 S:01f9 D:0000 DB:00 nvMxdIZC V: 30 H: 520
+02b24f rtl                    A:0000 X:1000 Y:0038 S:01fa D:0000 DB:00 nvMxdIZC V: 30 H: 596
+
+02b4c0 php                    A:0000 X:00a5 Y:001a S:01f5 D:0000 DB:00 nvMxdIzC V: 65 H: 922
+02b4c1 rep #$20               A:0000 X:00a5 Y:001a S:01f4 D:0000 DB:00 nvMxdIzC V: 65 H: 952
+02b4c3 lda [$a2],y   [05801a] A:0000 X:00a5 Y:001a S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H: 982
+02b4c5 iny                    A:14b8 X:00a5 Y:001a S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H:1046
+02b4c6 iny                    A:14b8 X:00a5 Y:001b S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H:1068
+02b4c7 sta $a5       [0000a5] A:881a X:00a5 Y:000e S:01f1 D:0000 DB:00 nvmxdIzc V:197 H: 778
+02b4c9 sep #$20               A:881a X:00a5 Y:000e S:01f1 D:0000 DB:00 nvmxdIzc V:197 H: 794
+02b4cb lda [$a2],y   [05800e] A:881a X:00a5 Y:000e S:01f1 D:0000 DB:00 nvMxdIzc V:197 H: 824
+02b4cd iny                    A:880c X:00a5 Y:000e S:01f1 D:0000 DB:00 nvMxdIzc V:197 H: 880
+02b4ce sta $a7       [0000a7] A:140d X:00a5 Y:001d S:01f4 D:0000 DB:00 nvMxdIzC V: 65 H:1238
+02b4d0 rep #$20               A:140d X:00a5 Y:001d S:01f4 D:0000 DB:00 nvMxdIzC V: 65 H:1270
+02b4d2 lda $0001,x   [0000a6] A:140d X:00a5 Y:001d S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H:1300
+02b4d5 and #$007f             A:0d14 X:00a5 Y:001d S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H:1354
+02b4d8 pha                    A:0014 X:00a5 Y:001d S:01f4 D:0000 DB:00 nvmxdIzC V: 66 H:  22
+02b4d9 eor $0001,x   [0000a6] A:0014 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzC V: 66 H:  60
+02b4dc asl a                  A:0d00 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzC V: 66 H: 114
+02b4dd ora #$0080             A:1a00 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzc V: 66 H: 136
+02b4e0 ora $01,s     [0001f3] A:1a80 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzc V: 66 H: 168
+02b4e2 sta $0001,x   [0000a6] A:1a94 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzc V: 66 H: 214
+02b4e5 pla                    A:1a94 X:00a5 Y:001d S:01f2 D:0000 DB:00 nvmxdIzc V: 66 H: 268
+02b4e6 plp                    A:0014 X:00a5 Y:001d S:01f4 D:0000 DB:00 nvmxdIzc V: 66 H: 312
+02b4e7 rts                    A:0014 X:00a5 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V: 66 H: 348
+
+02b63b jsr $b6c8     [02b6c8] A:0002 X:0800 Y:0018 S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 104
+02b63e sta $8c       [00008c] A:0000 X:0800 Y:0019 S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 366
+02b640 jsr $b6c8     [02b6c8] A:0000 X:0800 Y:0019 S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 446
+02b643 sta $8d       [00008d] A:0000 X:0800 Y:001a S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 804
+02b645 ldx #$00a5             A:0000 X:0800 Y:001a S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 836
+02b648 jsr $b4c0     [02b4c0] A:0000 X:00a5 Y:001a S:01f7 D:0000 DB:00 nvMxdIzC V: 65 H: 868
+02b64b lda $0334     [000334] A:0014 X:00a5 Y:001d S:01f7 D:0000 DB:00 nvMxdIzC V: 66 H: 398
+02b64e cmp $8d       [00008d] A:0000 X:00a5 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V: 66 H: 438
+02b650 beq $b653     [02b653] A:0000 X:00a5 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V: 66 H: 470
+02b652 rts                    A:0000 X:00a5 Y:02aa S:01f3 D:0000 DB:00 NvMxdIzc V:228 H: 390
+02b653 ldx $a5       [0000a5] A:0000 X:00a5 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V: 66 H: 500
+02b655 cpx $ab       [0000ab] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 66 H: 580
+02b657 bne $b65f     [02b65f] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 66 H: 620
+02b65f ldx $a5       [0000a5] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 66 H: 650
+02b661 stx $ab       [0000ab] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 66 H: 690
+02b663 lda $a7       [0000a7] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 66 H: 730
+02b665 sta $ad       [0000ad] A:001a X:94b8 Y:001d S:01f7 D:0000 DB:00 nvMxdIzC V: 66 H: 762
+02b667 lda $0204     [000204] A:001a X:94b8 Y:001d S:01f7 D:0000 DB:00 nvMxdIzC V: 66 H: 794
+02b66a beq $b674     [02b674] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V: 66 H: 834
+02b66c lda $2143     [002143] A:00ff X:947f Y:0391 S:01f3 D:0000 DB:00 NvMxdIzc V:241 H: 126
+02b66f bne $b66c     [02b66c] A:00ff X:947f Y:0391 S:01f3 D:0000 DB:00 NvMxdIzc V:241 H:  96
+02b674 lda #$f0               A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V: 66 H: 864
+02b676 sta $2140     [002140] A:00f0 X:94b8 Y:001d S:01f7 D:0000 DB:00 NvMxdIzC V: 67 H: 630
+02b679 lda $2140     [002140] A:00f0 X:a988 Y:029e S:01f3 D:0000 DB:00 NvMxdIzC V:213 H:1028
+02b67c bne $b679     [02b679] A:0001 X:a988 Y:029e S:01f3 D:0000 DB:00 nvMxdIzC V:213 H:1066
+02b67e lda #$02               A:0000 X:a988 Y:029e S:01f3 D:0000 DB:00 nvMxdIZC V:164 H: 234
+02b680 jsr $beca     [02beca] A:0002 X:a988 Y:029e S:01f3 D:0000 DB:00 nvMxdIzC V:164 H: 258
+02b683 lda #$ff               A:0000 X:a988 Y:029e S:01f3 D:0000 DB:00 nvMxdIZC V:225 H: 384
+02b685 sta $2140     [002140] A:00ff X:a988 Y:029e S:01f3 D:0000 DB:00 NvMxdIzC V:225 H: 408
+02b688 lda #$02               A:00ff X:a988 Y:029e S:01f3 D:0000 DB:00 NvMxdIzC V:225 H: 446
+02b68a jsr $beca     [02beca] A:0002 X:a988 Y:029e S:01f3 D:0000 DB:00 nvMxdIzC V:225 H: 470
+02b68d jsl $029964   [029964] A:0000 X:94b8 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V:225 H: 290
+02b691 lda #$03               A:b87e X:0000 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V:165 H: 246
+02b693 jsr $beca     [02beca] A:b803 X:0000 Y:001d S:01f7 D:0000 DB:00 nvMxdIzC V:165 H: 270
+02b696 lda $8c       [00008c] A:b800 X:0000 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V:225 H: 386
+02b698 sta $2140     [002140] A:b800 X:0000 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V:225 H: 418
+02b69b rts                    A:b800 X:0000 Y:001d S:01f7 D:0000 DB:00 nvMxdIZC V:225 H: 456
+
+02b6c8 php                    A:0002 X:0800 Y:0018 S:01f5 D:0000 DB:00 nvMxdIzC V: 65 H: 150
+02b6c9 rep #$20               A:0002 X:0800 Y:0018 S:01f4 D:0000 DB:00 nvMxdIzC V: 65 H: 180
+02b6cb lda [$a2],y   [058018] A:0002 X:0800 Y:0018 S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H: 210
+02b6cd iny                    A:0000 X:0800 Y:0018 S:01f4 D:0000 DB:00 nvmxdIZC V: 65 H: 274
+02b6ce and #$00ff             A:0000 X:0800 Y:0019 S:01f4 D:0000 DB:00 nvmxdIzC V: 65 H: 296
+02b6d1 plp                    A:0000 X:0800 Y:0019 S:01f4 D:0000 DB:00 nvmxdIZC V: 65 H: 328
+02b6d2 rts                    A:0000 X:0800 Y:0019 S:01f5 D:0000 DB:00 nvMxdIzC V: 65 H: 364
+
+02beb8 php                    A:0002 X:94b8 Y:001d S:01f2 D:0000 DB:00 nvMxdIzC V: 66 H:1150
+02beb9 sep #$20               A:0002 X:94b8 Y:001d S:01f1 D:0000 DB:00 nvMxdIzC V: 66 H:1180
+02bebb pha                    A:0002 X:94b8 Y:001d S:01f1 D:0000 DB:00 nvMxdIzC V: 66 H:1210
+02bebc lda $4210     [004210] A:0002 X:94b8 Y:001d S:01f0 D:0000 DB:00 nvMxdIzC V: 66 H:1240
+02bebf lda $4210     [004210] A:0042 X:94b8 Y:001d S:01f0 D:0000 DB:00 nvMxdIzC V: 66 H:1278
+02bec2 bpl $bebf     [02bebf] A:0042 X:94b8 Y:001d S:01f0 D:0000 DB:00 nvMxdIzC V: 66 H:1316
+02bec4 lda $4210     [004210] A:00c2 X:94b8 Y:001d S:01f0 D:0000 DB:00 NvMxdIzC V:225 H:  40
+02bec7 pla                    A:0042 X:94b8 Y:001d S:01f0 D:0000 DB:00 nvMxdIzC V:225 H:  78
+02bec8 plp                    A:0002 X:94b8 Y:001d S:01f1 D:0000 DB:00 nvMxdIzC V:225 H: 114
+02bec9 rts                    A:0002 X:94b8 Y:001d S:01f2 D:0000 DB:00 nvMxdIzC V:225 H: 150
+
+02beca pha                    A:0002 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V: 66 H:1066
+02becb jsr $beb8     [02beb8] A:0002 X:94b8 Y:001d S:01f4 D:0000 DB:00 nvMxdIzC V: 66 H:1096
+02bece pla                    A:0002 X:94b8 Y:001d S:01f4 D:0000 DB:00 nvMxdIzC V:225 H: 200
+02becf dec                    A:0002 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V:225 H: 236
+02bed0 bne $beca     [02beca] A:0001 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V:225 H: 258
+02bed2 rts                    A:0000 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIZC V:225 H: 308
