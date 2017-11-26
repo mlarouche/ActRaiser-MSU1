@@ -1,6 +1,6 @@
 ACTRAISER-USA
 1048576 Bytes (8.0000 Mb)
-HiROM: No
+LoROM
 Internal size: 8 Mb
 Version: 1.0
 Checksum: Ok, 0x83db (calculated) == 0x83db (internal)
@@ -25,7 +25,7 @@ F8000-FFFFF
 07 = 06 = 70941b = Powerful Enemy (Boss Battle 2)
 08 = 07 = b8941a = Opening
 09 = 08 = cca71c = Descent
-10 = 09 = 0ff60e = Piramid ~ Marana
+10 = 09 = 9ff60e = Piramid ~ Marana
 11 = 10 = edab1b = Birth of the People
 12 = 11 = ebaf1c = Level Up (Jingle)
 13 = 12 = 4bfa19 = North Wall
@@ -585,3 +585,14 @@ F8000-FFFFF
 02becf dec                    A:0002 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V:225 H: 236
 02bed0 bne $beca     [02beca] A:0001 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIzC V:225 H: 258
 02bed2 rts                    A:0000 X:94b8 Y:001d S:01f5 D:0000 DB:00 nvMxdIZC V:225 H: 308
+
+; Before a boss, I suppose it checks if
+00a41e rep #$20
+00a420 lda #$27
+00a423 sta $0012,x
+00a426 rts
+00a427 sep #$20
+00a429 lda $2140
+00a42c rep #$20
+00a42e beq $a431
+00a430 rts

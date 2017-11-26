@@ -1,0 +1,96 @@
+{
+    "$schema": "https://raw.githubusercontent.com/qwertymodo/msupcmplusplus/master/configs/schema#",
+    "game": "ActRaiser",
+    "pack": "ActRaiser MIDI Orchestra",
+    "artist": "Abyss Rebirth",
+    "url": "http://www.mediafire.com/?gb61j7qiwkadu2w",
+    "normalization": -12,
+    "output_prefix": "actraiser_msu1",
+    "tracks": [
+        {
+            "track_number": 0,
+            "title": "Fillmore",
+            "file": "actraiser_fillmore.wav"
+        },
+        {
+            "track_number": 1,
+            "title": "Sky Palace",
+            "file": "actraiser_sky_palace.wav"
+        },
+        {
+            "track_number": 2,
+            "title": "Bloodpool",
+            "file": "actraiser_bloodpool.wav"
+        },
+        {
+            "track_number": 3,
+            "title": "Beast Appears",
+            "file": "actraiser_beast_appears.wav"
+        },
+        {
+            "track_number": 5,
+            "title": "Aitos",
+            "file": "actraiser_aitos.wav"
+        },
+        {
+            "track_number": 6,
+            "title": "Powerful Enemy",
+            "file": "actraiser_powerful_enemy.wav"
+        },
+        {
+            "track_number": 7,
+            "title": "Opening",
+            "file": "actraiser_opening.wav"
+        },
+        {
+            "track_number": 8,
+            "title": "Descent",
+            "file": "actraiser_descent.wav"
+        },
+        {
+            "track_number": 9,
+            "title": "Pyramid",
+            "file": "actraiser_pyramid.wav"
+        },
+        {
+            "track_number": 10,
+            "title": "Birth of the People",
+            "file": "actraiser_birth_people.wav"
+        },
+        {
+            "track_number": 12,
+            "title": "North Wall",
+            "file": "actraiser_north_wall.wav"
+        },
+        {
+            "track_number": 13,
+            "title": "All over the World",
+            "file": "actraiser_all_over_the_world.wav"
+        },
+        {
+            "track_number": 14,
+            "title": "Satan",
+            "file": "actraiser_satan.wav"
+        },
+        {
+            "track_number": 15,
+            "title": "Silence (name of the track)",
+            "file": "actraiser_silence.wav"
+        },
+        {
+            "track_number": 16,
+            "title": "Sacrifices",
+            "file": "actraiser_sacrifices.wav"
+        },
+        {
+            "track_number": 19,
+            "title": "Peaceful World",
+            "file": "actraiser_peaceful_world.wav"
+        },
+        {
+            "track_number": 21,
+            "title": "Ending",
+            "file": "actraiser_ending.wav"
+        }
+    ]
+}
