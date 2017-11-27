@@ -4,43 +4,54 @@
     "pack": "ActRaiser MIDI Orchestra",
     "artist": "Abyss Rebirth",
     "url": "http://www.mediafire.com/?gb61j7qiwkadu2w",
-    "normalization": -12,
+    "normalization": -19,
     "output_prefix": "actraiser_msu1",
     "tracks": [
         {
             "track_number": 0,
             "title": "Fillmore",
-            "file": "actraiser_fillmore.wav"
+            "file": "actraiser_fillmore.wav",
+            "trim_end": 2576384,
+            "loop": 372736
         },
         {
             "track_number": 1,
             "title": "Sky Palace",
-            "file": "actraiser_sky_palace.wav"
+            "file": "actraiser_sky_palace.wav",
+            "trim_end": 2645991
         },
         {
             "track_number": 2,
             "title": "Bloodpool",
-            "file": "actraiser_bloodpool.wav"
+            "file": "actraiser_bloodpool.wav",
+            "trim_end": 2036672,
+            "loop": 135951
         },
         {
             "track_number": 3,
             "title": "Beast Appears",
-            "file": "actraiser_beast_appears.wav"
+            "file": "actraiser_beast_appears.wav",
+            "trim_end": 1382400
         },
         {
             "track_number": 5,
             "title": "Aitos",
-            "file": "actraiser_aitos.wav"
+            "file": "actraiser_aitos.wav",
+            "trim_end": 3773541
         },
         {
             "track_number": 6,
             "title": "Powerful Enemy",
-            "file": "actraiser_powerful_enemy.wav"
+            "file": "actraiser_powerful_enemy.wav",
+            "trim_end": 1058204,
+            "loop": 46009
         },
         {
             "track_number": 7,
             "title": "Opening",
-            "file": "actraiser_opening.wav"
+            "file": "actraiser_opening.wav",
+            "trim_end": 3110912,
+            "loop": 288768
         },
         {
             "track_number": 8,
@@ -50,12 +61,15 @@
         {
             "track_number": 9,
             "title": "Pyramid",
-            "file": "actraiser_pyramid.wav"
+            "file": "actraiser_pyramid.wav",
+            "trim_end": 5311488
         },
         {
             "track_number": 10,
             "title": "Birth of the People",
-            "file": "actraiser_birth_people.wav"
+            "file": "actraiser_birth_people.wav",
+            "trim_end": 1788032,
+            "loop": 41472
         },
         {
             "track_number": 12,
@@ -65,12 +79,16 @@
         {
             "track_number": 13,
             "title": "All over the World",
-            "file": "actraiser_all_over_the_world.wav"
+            "file": "actraiser_all_over_the_world.wav",
+            "trim_end": 4927488,
+            "loop": 315392
         },
         {
             "track_number": 14,
             "title": "Satan",
-            "file": "actraiser_satan.wav"
+            "file": "actraiser_satan.wav",
+            "trim_end": 3541879,
+            "loop": 1170657
         },
         {
             "track_number": 15,
@@ -80,12 +98,15 @@
         {
             "track_number": 16,
             "title": "Sacrifices",
-            "file": "actraiser_sacrifices.wav"
+            "file": "actraiser_sacrifices.wav",
+            "trim_end": 2832560,
+            "loop": 458752
         },
         {
             "track_number": 19,
             "title": "Peaceful World",
-            "file": "actraiser_peaceful_world.wav"
+            "file": "actraiser_peaceful_world.wav",
+            "trim_end": 5296256
         },
         {
             "track_number": 21,

@@ -206,6 +206,9 @@ scope TrackNeedLooping: {
     // Ending (Another Jingle, shorter one)
     cpx.b #18
     beq NoLooping
+    // Ending (Long Track)
+    cpx.b #21
+    beq NoLooping
     lda.b #$03
     rts
 NoLooping:
